@@ -1,6 +1,6 @@
 {% set name = "sphinxcontrib-websupport" %}
-{% set version = "1.1.2" %}
-{% set sha256 = "1501befb0fdf1d1c29a800fdbf4ef5dc5369377300ddbdd16d2cd40e54c6eefc" %}
+{% set version = "1.2.1" %}
+{% set sha256 = "545f5da4bd7757e82b8a23ce3af9500c6ffeedbcb13429fca436ad1e80bd10cf" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
 build:
   noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -33,7 +33,7 @@ about:
   license: BSD-2-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'Sphinx API for Web Apps'
+  summary: Sphinx API for Web Apps
   description: |
     sphinxcontrib-websupport provides a Python API to easily integrate
     Sphinx documentation into your Web application
