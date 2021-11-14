@@ -19,11 +19,12 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.5
     - setuptools
   run:
-    - python >=3.6
+    - python >=3.5
     - sphinx
+    - jinja2
     - sphinxcontrib-serializinghtml
 
 test:
