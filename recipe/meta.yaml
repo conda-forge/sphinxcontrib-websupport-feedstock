@@ -13,20 +13,28 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
     - pip
-    - python
+    - python >=3.5
     - setuptools
   run:
-    - python
+    - python >=3.5
+    - sphinx
+    - jinja2
+    - sphinxcontrib-serializinghtml
 
 test:
   imports:
     - sphinxcontrib
+    - sphinxcontrib.serializinghtml
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: https://pypi.python.org/pypi/sphinxcontrib-websupport
