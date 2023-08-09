@@ -34,7 +34,7 @@ test:
     - pip check
 
 about:
-  home: https://pypi.python.org/pypi/sphinxcontrib-websupport
+  home: https://www.sphinx-doc.org/
   license: BSD-2-Clause
   license_family: BSD
   license_file: LICENSE
