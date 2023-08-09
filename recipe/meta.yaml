@@ -1,4 +1,4 @@
-{% set version = "1.2.5" %}
+{% set version = "1.2.6" %}
 
 package:
   name: sphinxcontrib-websupport
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/sphinxcontrib-websupport/sphinxcontrib_websupport-{{ version }}.tar.gz
-  sha256: 509fc23a879c6c025a6748d3d72b7450c5d82a93a532ef01fd29a206991673d5
+  sha256: d592be8e11261bbbc64668f258efc4fd42c93ab617411143b5245fe30c633d8c
 
 build:
   noarch: python

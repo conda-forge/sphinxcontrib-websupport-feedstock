@@ -3,7 +3,7 @@ About sphinxcontrib-websupport-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sphinxcontrib-websupport-feedstock/blob/main/LICENSE.txt)
 
-Home: https://pypi.python.org/pypi/sphinxcontrib-websupport
+Home: https://www.sphinx-doc.org/
 
 Package license: BSD-2-Clause
 
@@ -151,5 +151,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@AA-Turner](https://github.com/AA-Turner/)
 * [@chohner](https://github.com/chohner/)
 
