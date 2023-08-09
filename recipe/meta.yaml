@@ -1,43 +1,40 @@
-{% set name = "sphinxcontrib-websupport" %}
-{% set version = "1.2.4" %}
-{% set sha256 = "4edf0223a0685a7c485ae5a156b6f529ba1ee481a1417817935b20bde1956232" %}
+{% set version = "1.2.5" %}
 
 package:
-  name: {{ name|lower }}
+  name: sphinxcontrib-websupport
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/s/sphinxcontrib-websupport/sphinxcontrib_websupport-{{ version }}.tar.gz
+  sha256: 509fc23a879c6c025a6748d3d72b7450c5d82a93a532ef01fd29a206991673d5
 
 build:
   noarch: python
-  number: 1
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
+    - python >=3.9
     - pip
-    - python >=3.5
-    - setuptools
+    - flit-core >=3.7
   run:
-    - python >=3.5
-    - sphinx
+    - python >=3.9
+    - sphinx >=5
     - jinja2
     - sphinxcontrib-serializinghtml
 
 test:
   imports:
     - sphinxcontrib
-    - sphinxcontrib.serializinghtml
+    - sphinxcontrib.websupport
   requires:
     - pip
   commands:
     - pip check
 
 about:
-  home: https://pypi.python.org/pypi/sphinxcontrib-websupport
+  home: https://www.sphinx-doc.org/
   license: BSD-2-Clause
   license_family: BSD
   license_file: LICENSE
@@ -45,7 +42,7 @@ about:
   description: |
     sphinxcontrib-websupport provides a Python API to easily integrate
     Sphinx documentation into your Web application
-  doc_url: http://www.sphinx-doc.org/en/stable/
+  doc_url: https://www.sphinx-doc.org/en/master/
   dev_url: https://github.com/sphinx-doc/sphinxcontrib-websupport
 
 extra:
