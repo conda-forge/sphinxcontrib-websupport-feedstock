@@ -5,7 +5,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/w/sphinxcontrib-websupport/sphinxcontrib-websupport-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/w/sphinxcontrib-websupport/sphinxcontrib_websupport-{{ version }}.tar.gz
   sha256: 509fc23a879c6c025a6748d3d72b7450c5d82a93a532ef01fd29a206991673d5
 
 build:
