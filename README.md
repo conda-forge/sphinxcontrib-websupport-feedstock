@@ -152,5 +152,4 @@ Feedstock Maintainers
 =====================
 
 * [@AA-Turner](https://github.com/AA-Turner/)
-* [@chohner](https://github.com/chohner/)
 
