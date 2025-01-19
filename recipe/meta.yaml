@@ -5,21 +5,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/s/sphinxcontrib-websupport/sphinxcontrib_websupport-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/s/sphinxcontrib-websupport/sphinxcontrib_websupport-{{ version }}.tar.gz
   sha256: e322802ebfd5fe79368efd864aeb87b063566ae61911dccb2714e28a45ed7561
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - pip
     - flit-core >=3.7
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - sphinx >=5
     - jinja2
     - sphinxcontrib-serializinghtml
@@ -30,6 +30,7 @@ test:
     - sphinxcontrib.websupport
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
